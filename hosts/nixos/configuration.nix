@@ -89,7 +89,7 @@
     # allowUnfree is already on (see hosts/shared/default.nix) — required
     # for these two, since they package Microsoft's own font files.
     corefonts
-    vistafonts
+    vista-fonts
 
     # Broad Unicode fallback so missing glyphs (CJK, symbols, emoji) show up
     # as actual characters instead of "tofu" boxes in games, Discord, etc.

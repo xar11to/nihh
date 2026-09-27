@@ -95,7 +95,7 @@ declarative module properly.
 
 Added to `hosts/nixos/configuration.nix`'s `fonts.packages`:
 
-- **`corefonts`, `vistafonts`** — the classic Wine/Proton gap: many
+- **`corefonts`, `vista-fonts`** — the classic Wine/Proton gap: many
   Windows games and launchers hard-depend on Arial, Times New Roman,
   Tahoma, Segoe UI, Calibri. Both are unfree (Microsoft's own font files),
   already covered by `allowUnfree = true` in `hosts/shared/default.nix`.
@@ -145,7 +145,7 @@ each `nixos-rebuild` re-resolves `nixos-26.05` to its current tip.
 | `workspace.wallpaper` pointing at a file that doesn't exist yet | 100% until you add the file | Not a bug — you need to drop an actual image at `/home/xaruto/Pictures/wallpaper.jpg` (or change the path) before this does anything. |
 | plasma-manager's `wallpaper` not re-applying after a point release (upstream issue #583) | ~10% | Known, currently-open upstream bug on some Plasma 6.6 builds. Log out/in fixes it when it happens; not something this config can work around. |
 | `pogoda`/`pogoda3` (wttr.in) | ~3% | Depends on a third-party free service staying up; no API key/account to misconfigure. If wttr.in is ever down, the command just times out — no other side effects. |
-| Added fonts (`corefonts`, `vistafonts`, Noto/DejaVu) | ~1% | Pure additions, nothing removed or overridden; worst case is a slightly longer first build while they download. |
+| Added fonts (`corefonts`, `vista-fonts`, Noto/DejaVu) | ~1% | Pure additions, nothing removed or overridden; worst case is a slightly longer first build while they download. |
 
 Overall: this is a low-risk, mechanical reorganization. The only real trap is
 the git-tracking gotcha above — always `git add -A` after editing before you

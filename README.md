@@ -99,7 +99,7 @@ Added to `hosts/nixos/configuration.nix`'s `fonts.packages`:
   Windows games and launchers hard-depend on Arial, Times New Roman,
   Tahoma, Segoe UI, Calibri. Both are unfree (Microsoft's own font files),
   already covered by `allowUnfree = true` in `hosts/shared/default.nix`.
-- **`dejavu_fonts`, `noto-fonts`, `noto-fonts-cjk-sans`, `noto-fonts-emoji`**
+- **`dejavu_fonts`, `noto-fonts`, `noto-fonts-cjk-sans`, `noto-fonts-color-emoji`**
   — broad Unicode fallback so missing glyphs (CJK text, symbols, emoji) show
   up as real characters instead of tofu boxes, in games and everywhere else
   (Discord, browsers, Telegram).

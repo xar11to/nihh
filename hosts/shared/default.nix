@@ -3,6 +3,7 @@
   imports = [
     ./bootloader.nix
     ./network.nix
+    ./warp.nix
   ];
 
   # Set your time zone.

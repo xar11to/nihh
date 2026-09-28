@@ -73,6 +73,8 @@
     dedicatedServer.openFirewall = true;
   };
 
+  programs.dconf.enable = true;
+  
   fileSystems."/mnt/games" = {
     device = "/dev/disk/by-uuid/D40A5F240A5F0342";
     fsType = "ntfs3";

@@ -21,6 +21,10 @@ nixpkgs.lib.nixosSystem {
         useGlobalPkgs = true;
         useUserPackages = true;
 
+        # Move pre-existing files (e.g. old fontconfig/kdeglobals) aside as
+        # *.backup instead of aborting activation on a collision.
+        backupFileExtension = "backup";
+
         sharedModules = [
           plasma-manager.homeModules.plasma-manager
         ];

@@ -9,7 +9,7 @@
       # this option silently stops re-applying after an upgrade until you
       # log out/in again — if the wallpaper doesn't change after a rebuild,
       # that's the first thing to check.
-      wallpaper = "/home/xaruto/Pictures/wallpaper.jpg";
+      wallpaper = "/home/xaruto/Pictures/wallpaper.png";
     };
   };
 }

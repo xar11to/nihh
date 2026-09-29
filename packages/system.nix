@@ -11,8 +11,6 @@
     vim
     wget
    
-    cloudflare-warp
-
     umu-launcher
     ayugram-desktop
 

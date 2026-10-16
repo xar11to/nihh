@@ -25,7 +25,7 @@
 
     powerManagement = {
       enable = true;
-      finegrained = false;
+      finegrained = true;
     };
 
     prime = {

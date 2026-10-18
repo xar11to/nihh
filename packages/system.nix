@@ -12,6 +12,9 @@
     wget
 
     cloudflare-warp
+
+    qbittorrent
+    mpv
    
     umu-launcher
     ayugram-desktop

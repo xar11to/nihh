@@ -1,4 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+let
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config = pkgs.config;
+  };
+in
 {
   environment.systemPackages = with pkgs; [
     vulkan-tools
@@ -6,34 +12,29 @@
     vulkan-validation-layers
     intel-media-driver
     intel-vaapi-driver
+    mesa-demos
 
     git
     vim
     wget
-
+    
     cloudflare-warp
 
     qbittorrent
     mpv
    
+    lutris
     umu-launcher
     ayugram-desktop
     vesktop
 
-    (lutris.override {
-      extraPkgs = pkgs: with pkgs; [
-        vulkan-tools
-        vulkan-loader
-        mesa-demos
-      ];
-    })
-
     wineWow64Packages.stable
     winetricks
-    mesa-demos
 
     libreoffice-still
     hunspell
+
+    unstable.jetbrains-toolbox
 
     (python3.withPackages (ps: with ps; [
       dbus-python
